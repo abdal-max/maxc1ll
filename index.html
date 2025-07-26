@@ -1,15 +1,175 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>موقعي البسيط</title>
+  <title>ملفي الشخصي - عبد الرحمن</title>
+
+  <!-- خط Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
+    :root {
+      --primary: #ff6f00;
+      --background: #fefefe;
+      --text: #333;
+      --gray: #777;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 2rem 5%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-right: 4px solid var(--primary);
+      padding-right: 10px;
+    }
+
+    .features, .skills, .projects {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .features {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .feature-box, .skill-box, .project-box {
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .skills {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .skills .skill-box {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .projects {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .project-box h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    .project-box p {
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      .section-title { font-size: 1.5rem; }
+    }
   </style>
 </head>
 <body>
-  <h1>مرحبًا بك في موقعي البسيط 🚀</h1>
-  <p>تم إنشاؤه ورفعه باستخدام Vercel</p>
+
+  <header>
+    <h1>عبد الرحمن سَعِيد</h1>
+    <p>مطور واجهات أمامية ومهتم بالتقنيات الحديثة وتطوير الأنظمة</p>
+  </header>
+
+  <section>
+    <h2 class="section-title">معلومات عني</h2>
+    <p>أنا مطور واجهات أمامية Front-End بخبرة قوية في بناء واجهات احترافية باستخدام Angular، مهتم ببناء تطبيقات الويب القابلة للتوسع وقائمة على أفضل الممارسات البرمجية، وأسعى دائمًا لتعلم كل جديد في عالم التقنية.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">مميزاتي</h2>
+    <div class="features">
+      <div class="feature-box">كتابة كود نظيف ومنظم</div>
+      <div class="feature-box">بناء مشاريع مهيكلة وقابلة للصيانة</div>
+      <div class="feature-box">إتقان Angular وTypeScript</div>
+      <div class="feature-box">دمج الأنظمة APIs وFirebase وJWT</div>
+      <div class="feature-box">خبرة في UI/UX وتصميم متجاوب</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">مهاراتي</h2>
+    <div class="skills">
+      <div class="skill-box">Angular</div>
+      <div class="skill-box">TypeScript</div>
+      <div class="skill-box">HTML5</div>
+      <div class="skill-box">SCSS</div>
+      <div class="skill-box">JavaScript</div>
+      <div class="skill-box">Bootstrap</div>
+      <div class="skill-box">Git & GitHub</div>
+      <div class="skill-box">REST APIs</div>
+      <div class="skill-box">Firebase</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">مشاريعي</h2>
+    <div class="projects">
+      <div class="project-box">
+        <h3>نظام إدارة مركز تدريب</h3>
+        <p>تطبيق يدير الدورات والمدربين والمتدربين، مع صلاحيات للمشرفين وواجهة تسجيل المتدربين.</p>
+      </div>
+      <div class="project-box">
+        <h3>متجر إلكتروني للأحذية</h3>
+        <p>واجهة مستخدم متكاملة مع سلة تسوق، نظام تصفية، صفحة تفاصيل المنتج، ولوحة تحكم للإدارة.</p>
+      </div>
+      <div class="project-box">
+        <h3>نظام كاشير احترافي</h3>
+        <p>نقطة بيع POS تحتوي على إدارة منتجات وفواتير، وإحصائيات وتقارير، مع دعم الباركود والطباعة.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 عبد الرحمن سعيد — جميع الحقوق محفوظة.
+  </footer>
+
 </body>
 </html>
